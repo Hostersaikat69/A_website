@@ -1,0 +1,59 @@
+@font-face {
+    font-family: gilroy;
+    src: url(Gilroy-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+*::selection {
+    background-color: #fff;
+    color: black;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left ,rgb(0, 0, 0), rgb(97, 97, 97));
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    height: 30vh;
+    border-radius: 1vw;
+    width: 30vw;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(125, 125, 125, 0.2);
+    padding: 3vw;
+}
+
+h1 {
+    position: absolute;
+    top: 10%;
+    font-size: 3vw;
+}
+
+h4 {
+    text-align: center;
+}
+
+.content {
+    margin-top: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

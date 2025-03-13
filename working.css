@@ -1,0 +1,172 @@
+@font-face {
+    font-family: gilroy;
+    src: url(Gilroy-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: white;
+}
+
+*::selection {
+    background-color: #fff;
+    color: black;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+#cursor {
+    z-index: 9;
+    position: fixed;
+    background-color: #EDBFFF;
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    width: 20px;
+    transition: background-image 0.5s ease;
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+}
+
+#nav {
+    height: 55px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: absolute;
+    top: 0;
+    mix-blend-mode: difference;
+    z-index: 102;
+}
+
+#nav #nav-part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#nav-part3 #circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+#nav-part2 a {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#nav #nav-part2 a:hover {
+    cursor: pointer;
+    scale: 1.5;
+    transition: 0.3s;
+}
+
+@keyframes purpleAnime {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#purple {
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: #EDBFFF;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.marquee {
+    display: flex;
+    width: max-content; 
+    animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee span {
+    font-size: 20vw;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-right: 3vw;
+}
+
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } 
+}
+
+#nav-part2 h4:nth-child(1) {
+    border-bottom: 1.5px solid #fff;
+}
+
+
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left ,rgb(0, 0, 0), rgb(97, 97, 97));
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    height: 30vh;
+    border-radius: 1vw;
+    width: 30vw;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 3vw;
+}
+
+main h1 {
+    position: absolute;
+    top: 10%;
+    font-size: 3vw;
+}
+
+main h4 {
+    text-align: center;
+}
+
+main .content {
+    margin-top: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
